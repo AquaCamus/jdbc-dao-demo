@@ -12,15 +12,14 @@ public class Program {
 
 	public static void main(String[] args) {
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		
-		Department dp = new Department(1, "Books");
-		Seller sel = new Seller(1, "Gabriel", "gabriel@gmail.com", new Date(), 5000.0, dp);
 		
 		//O programa não conhece a implementação
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
-		System.out.println(sel);
+		Seller seller = sellerDao.findById(3);
+		
+		System.out.println(seller);
 
 	}
 
