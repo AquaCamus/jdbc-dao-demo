@@ -17,6 +17,7 @@ public class Program {
 		//O programa não conhece a implementação
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
+		System.out.println("=== Teste #1: Seller fundById =====");
 		Seller seller = sellerDao.findById(3);
 		
 		System.out.println(seller);
